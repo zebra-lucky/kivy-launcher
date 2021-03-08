@@ -36,7 +36,7 @@ version = 0.1
 
 # (list) Application requirements
 # comma seperated e.g. requirements = sqlite3,kivy
-requirements = kivy, android
+requirements = kivy, android, plyer
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -85,28 +85,31 @@ fullscreen = 0
 #android.presplash_color = #FFFFFF
 
 # (int) Android API to use
-#android.api = 19
+android.api = 29
 
 # (int) Minimum API required
-#android.minapi = 9
+android.minapi = 21
 
 # (int) Android SDK version to use
 #android.sdk = 20
 
 # (str) Android NDK version to use
-android.ndk = 19b
+android.ndk = 21d
+android.ndk_api = 21
 
 # (bool) Use --private data storage (True) or --dir public storage (False)
 #android.private_storage = True
 
 # (str) Android NDK directory (if empty, it will be automatically downloaded.)
-#android.ndk_path =
+android.ndk_path = /opt/android-ndk
 
 # (str) Android SDK directory (if empty, it will be automatically downloaded.)
-#android.sdk_path =
+android.sdk_path = /opt/android-sdk
 
 # (str) ANT directory (if empty, it will be automatically downloaded.)
-#android.ant_path =
+android.ant_path = /opt/apache-ant
+
+android.skip_update = True
 
 # (bool) If True, then skip trying to update the Android sdk
 # This can be useful to avoid excess Internet downloads or save time
@@ -144,7 +147,8 @@ android.ndk = 19b
 #android.gradle_dependencies =
 
 # (str) python-for-android branch to use, defaults to stable
-p4a.branch = master
+#p4a.branch = master
+p4a.source_dir = /opt/python-for-android
 
 # (str) XML file to include as an intent filters in <activity> tag
 #android.manifest.intent_filters =
